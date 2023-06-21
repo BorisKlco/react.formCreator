@@ -9,3 +9,31 @@ body {
     display: grid;
     place-content: center;
 }
+
+.formContainer {
+    margin-top: 1rem;
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    background-color: aliceblue;
+}
+
+.formLine {
+    margin:1rem auto;
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    border: 0.1rem solid #3333;
+    background-color: bisque;
+}
+
+.lineName input {
+    padding:0.25rem 0.5rem;
+    width: 15ch;
+}
+
+.lineContent button {
+    margin:0 0.5rem;
+    padding: 0.25rem;
+}
