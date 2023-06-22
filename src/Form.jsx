@@ -1,33 +1,21 @@
 import { useState } from "react";
+import Lines from "./Lines";
 
 const Form = () => {
-  const [inputValue, setInputValue] = useState("");
+  const [lines, setLines] = useState([]);
+
+  const addLine = () => {
+    setLines((lines) => [...lines, lines.length]);
+  };
 
   return (
     <div>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          console.log("Submit");
-        }}
-      >
-        <div className="formLine">
-          <div className="lineName">
-            <input type="text" placeholder="Label Name" />
-          </div>
-          <div className="lineContent">
-            <button>
-              Text:
-              <input type="text" placeholder="input Text" disabled />{" "}
-            </button>
-            <button>
-              Radio: <input type="radio" value="radio" disabled />{" "}
-            </button>
-          </div>
-          <span className="material-symbols-outlined">close</span>
-        </div>
+      <form>
+        {lines.map((line) => {
+          <Lines key={line} />;
+        })}
       </form>
-      <button>
+      <button onClick={addLine}>
         <span className="material-symbols-outlined">list_alt_add</span>
       </button>
     </div>
