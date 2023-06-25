@@ -1,8 +1,7 @@
-const Lines = (line) => {
+const Lines = () => {
   return (
-    <div key={line}>
-      <label htmlFor={`input-${line}`}>Label {line + 1}: </label>
-      <input type="text" id={`input-${line}`} />
+    <div>
+      <p>HUH</p>
     </div>
   );
 };

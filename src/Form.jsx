@@ -5,14 +5,15 @@ const Form = () => {
   const [lines, setLines] = useState([]);
 
   const addLine = () => {
-    setLines((lines) => [...lines, lines.length]);
+    setLines(lines => [...lines, <Lines />]);
   };
 
   return (
     <div>
       <form>
-        {lines.map((line) => {
-          <Lines key={line} />;
+        <Lines />
+        {lines.map(line => {
+          {line}
         })}
       </form>
       <button onClick={addLine}>
